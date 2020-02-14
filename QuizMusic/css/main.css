@@ -1,7 +1,31 @@
+
 .screen{
     background: gray;
     border: black solid;
     width: 1080px;
     height: 2160px;
+    position: relative;
    
+}
+
+#logo{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 290px;
+    top: 830px;
+    background: red;
+    text-align: center;
+    font-size: 200px;
+}
+
+#logo2{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 290px;
+    top: 800px;
+    background: red;
+    text-align: center;
+    font-size: 200px;
 }
