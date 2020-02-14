@@ -1,11 +1,29 @@
 
-.screen{
-    background: gray;
+section{
+    background: lightsalmon;
     border: black solid;
     width: 1080px;
     height: 2160px;
+    text-align: center;
     position: relative;
+    display: block;
    
+}
+
+h1{
+    display: inline; 
+    font-size: 100px; 
+}
+
+html, body, div, p, h2, a, ul, li, img {
+    margin: 0px;
+    padding: 0px;
+    font-size: 100px; 
+}
+
+#home{
+    
+    background-color: lightskyblue;
 }
 
 #logo{
