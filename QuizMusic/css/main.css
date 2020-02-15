@@ -1,5 +1,5 @@
 section{
-    background: lightsalmon;
+    background: deeppink;
     border: black solid;
     width: 1080px;
     height: 2160px;
@@ -29,7 +29,7 @@ html, body, div, p, h2, a, ul, li, img {
 }
 
 button{
-    background-color: rgb(228, 21, 141);
+    background-color: darkviolet;
     border-radius: 10%;
   border: none;
   color: white;
@@ -47,8 +47,7 @@ button{
 }
 
 #home{
-    
-    background-color: lightskyblue;
+    background: deeppink;
 }
 
 #logo{
