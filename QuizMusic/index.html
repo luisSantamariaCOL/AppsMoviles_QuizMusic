@@ -1,38 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuizMusic</title>
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-    <section class="screen">
-        <h1>Splash del juego</h1>
-        <div id="logo">logo</div>
-    </section>
-    <br>
-    
-    <section class="screen" id="home">
-        <div id="logo2">logo</div>
-        <br>
-        <br>
-        <a href="#">Juego</a>
-        <br>
-        <br>
-        <a href="#">Configuración</a>
-        <br>
-        <br>
-        <a href="#">Créditos</a>
-    </section>
-    <br>
-    
-    <section class="screen"></section>
-    <br>
-    <section class="screen"></section>
-    <br>
-    <section class="screen"></section>
-    <br>
-    <section class="screen"></section>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>QuizMusic</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <section class="screen" id="menu">
+            <h1>Splash del juego</h1>
+            <div id="logo">logo</div>
+            <br>
+            <div class="botones"><button onclick="toHome()">Ingresar</button></div>
+            
+        </section>
+        <section hidden class="screen" id="home">
+            <h1>QuizMusic</h1>
+            <div id="logo2">logo</div>
+            <div class="botones"><button onclick="toCategories()">Juego</button>
+                <br>
+                <button onclick="toConf()">Configuración</button>
+                <br>
+                <button onclick="toCredits()">Créditos</button></div>
+        </section>
+        <section hidden class="screen" id="categories">
+            <div class="botones">
+                <button onclick="toHome()">Volver</button>
+            <br>
+            <button type="button">Categoria 1</button>
+            <br>
+            <button type="button">Categoria 2</button>
+            <br>
+            <button type="button">Categoria 3</button>
+            </div>
+        </section>
+        <section hidden class="screen" id="credits">
+            <div class="circle"></div>
+            <h1>Manuela</h1>
+            <div class="circle"></div>
+            <h1>Luis</h1>
+            <div class="circle"></div>
+            <h1>Samuel</h1>
+            <br>
+            <button onclick="toHome()">Volver</button>
+        </section>
+        <section hidden class="screen" id="conf">
+            <h1>Configuración</h1>
+            <br>
+            <div class="botones"><button onclick="toHome()">Volver</button></div>
+            
+        </section>
+        <section hidden class="screen" id="dontknow">
+        </section>
+        <script src="js/main.js"></script>
+    </body>
 </html>
