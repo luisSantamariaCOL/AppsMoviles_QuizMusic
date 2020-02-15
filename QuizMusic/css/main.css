@@ -12,6 +12,7 @@ h1{
     font-size: 100px; 
 }
 
+
 html, body, div, p, h2, a, ul, li, img {
     margin: 0px;
     padding: 0px;
@@ -20,11 +21,29 @@ html, body, div, p, h2, a, ul, li, img {
 
 .botones{
     position: absolute;
-    width: 500px;
+    width: 1060px;
     height: 500px;
-    left: 290px;
+    left: 0px;
     top: 1460px;
     text-align: center;
+}
+
+button{
+    background-color: rgb(228, 21, 141);
+    border-radius: 10%;
+  border: none;
+  color: white;
+    padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 100px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#categorias{
+    margin-bottom: 200px;
+    top: 200px;
 }
 
 #home{
@@ -54,10 +73,6 @@ html, body, div, p, h2, a, ul, li, img {
     font-size: 200px;
 }
 
-button{
-    height: 120px;
-    width: 200px;
-}
 
 .circle {
     width: 100px;
