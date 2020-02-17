@@ -46,6 +46,19 @@ button{
   cursor: pointer;
 }
 
+.genero1{
+    text-align: justify;
+    margin-bottom: 100px;
+    left: 200px;
+    padding: 15px 32px;
+    width: 80%;
+}
+
+#volver{
+    position: relative;
+    top: 900px;
+}
+
 #categorias{
     margin-bottom: 200px;
     top: 200px;
