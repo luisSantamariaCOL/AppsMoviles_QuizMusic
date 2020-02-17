@@ -1,4 +1,15 @@
+
+ var tiempo_splash=1600;
+ window.onload = function (){
+     setTimeout(toHome, tiempo_splash);   //EN DOS SEGUNDOS LLAMARA A LA FUNCION CAMBIAR SPLASH
+
+ }
+ 
+
+
 function toHome(){
+    document.getElementById("QuizMusic").className = "animated flipInX";
+    document.getElementById("PrimerosBotones").className = "botones animated flipInX";
     document.getElementById("menu").style.display = "none";
     document.getElementById("home").style.display = "block";
     document.getElementById("categories").style.display = "none";

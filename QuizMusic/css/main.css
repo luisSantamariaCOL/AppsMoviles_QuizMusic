@@ -7,11 +7,16 @@ section{
     position: relative;
 }
 
-h1{
-    display: inline; 
+h1{ 
+    position: absolute;
+    left: 290px;
+    text-align: center;
     font-size: 100px; 
 }
 
+.oculto{
+    display: none;
+}
 
 html, body, div, p, h2, a, ul, li, img {
     margin: 0px;
@@ -55,7 +60,7 @@ button{
     width: 500px;
     height: 500px;
     left: 290px;
-    top: 830px;
+    top: 780px;
     background: red;
     text-align: center;
     font-size: 200px;
@@ -66,7 +71,7 @@ button{
     width: 500px;
     height: 500px;
     left: 290px;
-    top: 800px;
+    top: 780px;
     background: red;
     text-align: center;
     font-size: 200px;

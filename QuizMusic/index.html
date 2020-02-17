@@ -4,25 +4,32 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>QuizMusic</title>
+        <link rel="stylesheet" href="css/animated.css">
         <link rel="stylesheet" href="css/main.css">
     </head>
-    <body>
-        <section class="screen" id="menu">
-            <h1>Splash del juego</h1>
-            <div id="logo">logo</div>
+<body><!-- BODY-->
+        <section class="screen" id="menu" id="seccion1">
+           
+            <div id="logo" class="animated flipInX">logo</div>
             <br>
-            <div class="botones"><button onclick="toHome()">Ingresar</button></div>
+            <!-- 
+                 <h1 class="animated flipInX">Splash del juego</h1>
+                 <div class="botones animated flipInX"><button onclick="toHome()">Ingresar</button></div>
+            -->
+           
             
         </section>
         <section hidden class="screen" id="home">
-            <h1>QuizMusic</h1>
+            <div id="QuizMusic"> <h1 >QuizMusic</h1> </div>
             <div id="logo2">logo</div>
-            <div class="botones"><button onclick="toCategories()">Juego</button>
+            <div class="botones" id="PrimerosBotones"><button onclick="toCategories()">Juego</button>
                 <br>
                 <button onclick="toConf()">Configuración</button>
                 <br>
                 <button onclick="toCredits()">Créditos</button></div>
         </section>
+
+        <!--SECCION 2-->
         <section hidden class="screen" id="categories">
             <div class="botones" id="categorias">
              
