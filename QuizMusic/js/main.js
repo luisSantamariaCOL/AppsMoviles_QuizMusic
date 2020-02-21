@@ -16,6 +16,7 @@ function toHome(){
     document.getElementById("credits").style.display = "none";
     document.getElementById("conf").style.display = "none";
     document.getElementById("dontknow").style.display = "none";
+    document.getElementById("juego").style.display = "none";
 }
 function toCategories(){
     document.getElementById("menu").style.display = "none";
@@ -24,6 +25,7 @@ function toCategories(){
     document.getElementById("credits").style.display = "none";
     document.getElementById("conf").style.display = "none";
     document.getElementById("dontknow").style.display = "none";
+    document.getElementById("juego").style.display = "none";
 }
 
 function toCredits(){
@@ -33,6 +35,7 @@ function toCredits(){
     document.getElementById("credits").style.display = "block";
     document.getElementById("conf").style.display = "none";
     document.getElementById("dontknow").style.display = "none";
+    document.getElementById("juego").style.display = "none";
 }
 
 function toConf(){
@@ -42,8 +45,30 @@ function toConf(){
     document.getElementById("credits").style.display = "none";
     document.getElementById("conf").style.display = "block";
     document.getElementById("dontknow").style.display = "none";
+    document.getElementById("juego").style.display = "none";
 }
-      
+
+function toGame(){
+    document.getElementById("menu").style.display = "none";
+    document.getElementById("home").style.display = "none";
+    document.getElementById("categories").style.display = "none";
+    document.getElementById("credits").style.display = "none";
+    document.getElementById("conf").style.display = "none";
+    document.getElementById("dontknow").style.display = "none";
+    document.getElementById("juego").style.display = "block";
+}
+
+
+function aleatorio(){
+    var respuestas = ["CORRECTA","INCORRECTA1","INCORRECTA2","INCORRECTA3"];
+    var casillas = [];
+
+    if(respuestas[5]===undefined){
+        console.log("INDEFINIDO");
+    }
+    return Math.floor(Math.random()*(4));
+}
+
       /*
        var secciones = [];//en este array creare una funcion que me va a inicializar 
         var tiempo_splash=2000;

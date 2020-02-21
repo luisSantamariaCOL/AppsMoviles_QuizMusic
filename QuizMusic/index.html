@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>QuizMusic</title>
         <link rel="stylesheet" href="css/animated.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="css/main.css">
     </head>
 <body><!-- BODY-->
@@ -35,7 +36,7 @@
             <div class="botones" id="categorias">
              
                 <div >
-                    <button type="button" class="genero1">Rock</button>
+                    <button onclick="toGame()" type="button" class="genero1">Rock</button>
             <br>
             <button type="button" class="genero1">Pop</button>
             <br>
@@ -49,24 +50,45 @@
         
         <!-- CRÉDITOS SECCIÓN (3)-->
         </section>
-        <section hidden class="screen" id="credits">
-            <div class="circle"></div>
-            <h2>Manuela</h2>
-            <div class="circle"></div>
-            <h2>Luis</h2>
-            <div class="circle"></div>
-            <h2>Samuel</h2>
-            <br>
-            <button onclick="toHome()">Volver</button>
-        </section>
+            <section hidden class="screen" id="credits">
+                <div class="circle"></div>
+                <h2>Manuela</h2>
+                <div class="circle"></div>
+                <h2>Luis</h2>
+                <div class="circle"></div>
+                <h2>Samuel</h2>
+                <br>
+                <button onclick="toHome()">Volver</button>
+            </section>
+        <!-- CONFIGURACIÓN SECCIÓN (4)-->
         <section hidden class="screen" id="conf">
             <h1>Configuración</h1>
             <br>
             <div class="botones"><button onclick="toHome()">Volver</button></div>
             
         </section>
-        <section hidden class="screen" id="dontknow">
+        <!-- i dont know-->
+        <section hidden class="screen" id="dontknow"></section>
+
+        <!--                                    SECCIÓN JUEGO                                     -->
+        <section hidden class="screen" id="juego">
+            <div id="QuizMusic"> <h1 >QuizMusic</h1> </div>
+            <div id="logoCategorias"></div>
+                <div class="botones2"><br>
+                    <button>rpa #1</button>
+                    <br>
+                    <button>rpa #2</button>
+                    <br>
+                    <button>rpa #3</button>
+                    <br>
+                    <button>rpa #4</button>
+                    <br>
+                    <button onclick="toHome()">Volver</button>
+                </div>
+                
+            </div>
         </section>
+
         <script src="js/main.js"></script>
     </body>
 </html>

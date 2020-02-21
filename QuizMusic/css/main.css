@@ -4,7 +4,7 @@ section{
     width: 1080px;
     height: 2160px;
     text-align: center;
-    position: relative;
+    position: relative;    
 }
 
 h1{ 
@@ -31,6 +31,27 @@ html, body, div, p, h2, a, ul, li, img {
     left: 0px;
     top: 1460px;
     text-align: center;
+}
+
+.botones2{
+    position: relative;
+    width: 1060px;
+    height: 500px;
+    left: 0px;
+    top: 1200px;
+    text-align: center;
+}
+
+#logoCategorias{
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    left: 145px;
+    top: 400px;
+    background: red;
+    text-align: center;
+    border-radius: 50%;
+    
 }
 
 button{
