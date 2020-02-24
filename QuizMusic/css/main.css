@@ -42,6 +42,14 @@ html, body, div, p, h2, a, ul, li, img {
     text-align: center;
 }
 
+.botonrpta{
+    width: 80%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 30px;
+    font-family: arial;
+}
+
 #logoCategorias{
     position: absolute;
     width: 800px;
