@@ -5,7 +5,7 @@
 
  }
  
-respuestas();
+
 
 
 function toHome(){
@@ -59,19 +59,32 @@ function toGame(){
     document.getElementById("juego").style.display = "block";
 }
 
-
+var indexArray = 0;
 function respuestas(){
-    var respuestas = ["CORRECTA","INCORRECTA1","INCORRECTA2","INCORRECTA3"];
+    if (indexArray===5) {
+        indexArray=0;
+        toCategories();
+        return;
+    }
+    var respuestas = [
+        ["Coldplay","In the end","Green day","Eminem"],
+        ["Linkin Park","U2","Gorillaz","Queen"],
+        ["Queen","Ramones","The Beatles","Oasis"],
+        ["Coldplay","In the end","Green day","Eminem"],
+        ["Linkin Park","U2","Gorillaz","Queen"]
+    ];
     var casillas = [];
     var correcta = aleatorio();
-    casillas[correcta] = respuestas[0];
+    casillas[correcta] = respuestas[indexArray][0];
+    
     var count = 1;
     for (let i = 0; i < 4; i++) {
         if (casillas[i]==undefined) {
-            casillas[i] = respuestas[count];
+            casillas[i] = respuestas[indexArray][count];
             count++;
         }
     }
+    indexArray = indexArray + 1; 
     console.log(respuestas);
     console.log(casillas);
     console.log(count);   // if(respuestas[5]===undefined) console.log("INDEFINIDO");
@@ -85,6 +98,7 @@ function aleatorio(){
     return Math.floor(Math.random()*(4));
 }
 
+respuestas();
       /*
        var secciones = [];//en este array creare una funcion que me va a inicializar 
         var tiempo_splash=2000;
