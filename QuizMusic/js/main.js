@@ -6,8 +6,6 @@
  }
  
 
-
-
 function toHome(){
     document.getElementById("QuizMusic").className = "animated flipInX";
     document.getElementById("PrimerosBotones").className = "botones animated flipInX";
@@ -60,13 +58,14 @@ function toGame(){
 }
 
 var indexArray = 0;
-function respuestas(){
-    if (indexArray===5) {
+function respuestas(){ 
+
+    if (indexArray===5) { //YA HABIENDO LLEGADO AL FINAL, HAY QUE RESETEAR EL INDEX. 
         indexArray=0;
         toCategories();
         return;
     }
-    var respuestas = [
+    var respuestas = [ //ARRAY DE RESPUESTAS
         ["Coldplay","In the end","Green day","Eminem"],
         ["Linkin Park","U2","Gorillaz","Queen"],
         ["Queen","Ramones","The Beatles","Oasis"],
@@ -75,19 +74,22 @@ function respuestas(){
     ];
     var casillas = [];
     var correcta = aleatorio();
-    casillas[correcta] = respuestas[indexArray][0];
+    casillas[correcta] = respuestas[indexArray][0]; //Posicionar respuesta CORRECTA
     
     var count = 1;
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 4; i++) { //Posicionar respuestas INCORRECTA
         if (casillas[i]==undefined) {
             casillas[i] = respuestas[indexArray][count];
             count++;
         }
     }
     indexArray = indexArray + 1; 
+   /*
     console.log(respuestas);
     console.log(casillas);
-    console.log(count);   // if(respuestas[5]===undefined) console.log("INDEFINIDO");
+    console.log(count); 
+   */
+    //Agregando contenido a los botones rpta html
     document.getElementById("casilla1").innerHTML = casillas[0];
     document.getElementById("casilla2").innerHTML = casillas[1];
     document.getElementById("casilla3").innerHTML = casillas[2];
@@ -98,7 +100,7 @@ function aleatorio(){
     return Math.floor(Math.random()*(4));
 }
 
-respuestas();
+respuestas(); //Call
       /*
        var secciones = [];//en este array creare una funcion que me va a inicializar 
         var tiempo_splash=2000;
