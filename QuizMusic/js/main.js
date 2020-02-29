@@ -5,6 +5,7 @@
 
  }
  
+respuestas();
 
 
 function toHome(){
@@ -59,13 +60,28 @@ function toGame(){
 }
 
 
-function aleatorio(){
+function respuestas(){
     var respuestas = ["CORRECTA","INCORRECTA1","INCORRECTA2","INCORRECTA3"];
     var casillas = [];
-
-    if(respuestas[5]===undefined){
-        console.log("INDEFINIDO");
+    var correcta = aleatorio();
+    casillas[correcta] = respuestas[0];
+    var count = 1;
+    for (let i = 0; i < 4; i++) {
+        if (casillas[i]==undefined) {
+            casillas[i] = respuestas[count];
+            count++;
+        }
     }
+    console.log(respuestas);
+    console.log(casillas);
+    console.log(count);   // if(respuestas[5]===undefined) console.log("INDEFINIDO");
+    document.getElementById("casilla1").innerHTML = casillas[0];
+    document.getElementById("casilla2").innerHTML = casillas[1];
+    document.getElementById("casilla3").innerHTML = casillas[2];
+    document.getElementById("casilla4").innerHTML = casillas[3];
+}
+
+function aleatorio(){
     return Math.floor(Math.random()*(4));
 }
 
