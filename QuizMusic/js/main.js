@@ -84,6 +84,7 @@ function respuestas(){
         }
     }
     indexArray = indexArray + 1; 
+    
    /*
     console.log(respuestas);
     console.log(casillas);
@@ -94,6 +95,8 @@ function respuestas(){
     document.getElementById("casilla2").innerHTML = casillas[1];
     document.getElementById("casilla3").innerHTML = casillas[2];
     document.getElementById("casilla4").innerHTML = casillas[3];
+    var holamundo = document.getElementById("casilla1");
+    console.log(holamundo);
 }
 
 function aleatorio(){
