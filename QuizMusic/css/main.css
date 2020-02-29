@@ -1,5 +1,5 @@
 section{
-    background: deeppink;
+    background: #FFF3DD;
     border: black solid;
     width: 1080px;
     height: 2160px;
@@ -31,6 +31,7 @@ html, body, div, p, h2, a, ul, li, img {
     left: 0px;
     top: 1460px;
     text-align: center;
+    color: #2B2449;
 }
 
 .botones2{
@@ -40,6 +41,7 @@ html, body, div, p, h2, a, ul, li, img {
     left: 0px;
     top: 1200px;
     text-align: center;
+    color: #2B2449;
 }
 
 .botonrpta{
@@ -49,6 +51,7 @@ html, body, div, p, h2, a, ul, li, img {
     margin-bottom: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 60px;
+    color: #2B2449;
 }
 
 #logoCategorias{
@@ -64,10 +67,10 @@ html, body, div, p, h2, a, ul, li, img {
 }
 
 button{
-    background-color: darkviolet;
+    background-color: #FFE45F;
     border-radius: 10%;
   border: none;
-  color: white;
+  color: #2B2449;
     padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -95,7 +98,7 @@ button{
 }
 
 #home{
-    background: deeppink;
+    background: #FFF3DD;
 }
 
 #logo{
