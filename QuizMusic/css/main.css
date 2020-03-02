@@ -24,6 +24,8 @@ html, body, div, p, h2, a, ul, li, img {
     font-size: 100px; 
 }
 
+
+
 /*
 .loader {
   border: 16px solid #f3f3f3; 
@@ -49,6 +51,7 @@ html, body, div, p, h2, a, ul, li, img {
     top: 1460px;
     text-align: center;
     color: #2B2449;
+    z-index: 20;
 }
 
 .botones2{
@@ -69,6 +72,12 @@ html, body, div, p, h2, a, ul, li, img {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 60px;
     color: #2B2449;
+}
+
+#logoEstrella{
+    position: relative;
+    left: auto;
+    top: 50px;
 }
 
 #logoCategorias{
@@ -129,15 +138,18 @@ button{
     font-size: 200px;
 }
 
-#logo2{
+#logoPrincipal{
     position: absolute;
-    width: 500px;
-    height: 500px;
-    left: 290px;
-    top: 780px;
-    background: red;
-    text-align: center;
-    font-size: 200px;
+    left: 2.2%;
+    top: 24%;
+    z-index: 10;
+}
+
+#estrellas{
+    position: absolute;
+    left: 2.2%;
+    top: 20%;
+    z-index: 5;
 }
 
 
