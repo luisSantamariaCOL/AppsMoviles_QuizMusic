@@ -28,6 +28,13 @@
         </section>
         <section hidden class="screen" id="home">
 
+            <!-- fondo
+            <div>
+                <img style="z-index: 4; position: absolute; left: 0; width: 1080px; height: 2160px;" src="img/Botones y Fondos/fondo.jpg" alt="fondo">
+            </div>
+            -->
+            
+
             <div id="logoEstrella" class="animated tada">
                 <img  src="img/Logo y Splash/Asset 89.png" alt="Stars">
             </div>
@@ -38,12 +45,24 @@
             <div id="estrellas">
                 <img src="img/Logo y Splash/Asset 90.png" alt="stars">
             </div>
-            <div class="botones" id="PrimerosBotones"><button onclick="toCategories()">Juego</button>
-                <br>
-                <button onclick="toConf()">Instruccion</button>
-                <br>
-                <button onclick="toCredits()">Créditos</button>
-            </div>
+
+
+            <!--Boton jugar-->
+           <div id="primerosBotones">
+                <div >
+                    <img class="botonImagen" id="botonInstrucciones" onclick="toConf()" src="img/Botones y Fondos/Asset 73.png" alt="Juego">
+
+                </div>
+                <div >
+                    <img class="botonImagen" id="botonCreditos" onclick="toCredits()" src="img/Botones y Fondos/Asset 74.png" alt="Juego">
+
+                </div>
+                <div >
+                    <img class="botonImagen" id="botonJugar" onclick="toCategories()" src="img/Botones y Fondos/Asset 75.png" alt="Juego">
+                </div>
+           </div>
+               
+           
         </section>
 
         <!--CATEGORIAS (SECCION 2)-->

@@ -24,7 +24,25 @@ html, body, div, p, h2, a, ul, li, img {
     font-size: 100px; 
 }
 
+.botonImagen{
+position: absolute;
+cursor: pointer;
+z-index: 5;
+}
 
+#botonJugar{
+    left: 700px;
+    top: 1330px;
+}
+
+#botonInstrucciones{
+    left: 100px;
+    top: 1330px;
+}
+#botonCreditos{
+    left: 100px;
+    top: 1510px;
+}
 
 /*
 .loader {
@@ -40,8 +58,10 @@ html, body, div, p, h2, a, ul, li, img {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-
 */
+.botonesHome{
+    position: absolute;
+}
 
 .botones{
     position: absolute;
