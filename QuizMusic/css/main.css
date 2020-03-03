@@ -49,6 +49,7 @@ html, body, div, p, h2, a, ul, li, img {
     top: 1460px;
     text-align: center;
     color: #2B2449;
+    z-index: 2;
 }
 
 .botones2{
@@ -69,6 +70,12 @@ html, body, div, p, h2, a, ul, li, img {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 60px;
     color: #2B2449;
+}
+
+#logoEstrella{
+    position: relative;
+    left: auto;
+    top: 50px;
 }
 
 #logoCategorias{
@@ -127,6 +134,20 @@ button{
     background: red;
     text-align: center;
     font-size: 200px;
+}
+
+#logoPrincipal{
+    position: absolute;
+    left: 2.2%;
+    top: 24%;
+    z-index: 1;
+}
+
+#estrellas{
+    position: absolute;
+    left: 2.2%;
+    top: 20%;
+    z-index: 0;
 }
 
 #logo2{
