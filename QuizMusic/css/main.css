@@ -51,11 +51,7 @@ html, body, div, p, h2, a, ul, li, img {
     top: 1460px;
     text-align: center;
     color: #2B2449;
-<<<<<<< HEAD
     z-index: 2;
-=======
-    z-index: 20;
->>>>>>> 27197910b1088483574428b62ed098096909a2ec
 }
 
 .botones2{
@@ -95,6 +91,7 @@ html, body, div, p, h2, a, ul, li, img {
     border-radius: 50%;
     
 }
+
 
 button{
     background-color: #FFE45F;
@@ -143,7 +140,6 @@ button{
 }
 
 #logoPrincipal{
-<<<<<<< HEAD
     position: absolute;
     left: 2.2%;
     top: 24%;
@@ -155,22 +151,6 @@ button{
     left: 2.2%;
     top: 20%;
     z-index: 0;
-}
-
-#logo2{
-=======
->>>>>>> 27197910b1088483574428b62ed098096909a2ec
-    position: absolute;
-    left: 2.2%;
-    top: 24%;
-    z-index: 10;
-}
-
-#estrellas{
-    position: absolute;
-    left: 2.2%;
-    top: 20%;
-    z-index: 5;
 }
 
 
