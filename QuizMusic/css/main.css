@@ -24,6 +24,8 @@ html, body, div, p, h2, a, ul, li, img {
     font-size: 100px; 
 }
 
+
+
 /*
 .loader {
   border: 16px solid #f3f3f3; 
@@ -49,7 +51,11 @@ html, body, div, p, h2, a, ul, li, img {
     top: 1460px;
     text-align: center;
     color: #2B2449;
+<<<<<<< HEAD
     z-index: 2;
+=======
+    z-index: 20;
+>>>>>>> 27197910b1088483574428b62ed098096909a2ec
 }
 
 .botones2{
@@ -137,6 +143,7 @@ button{
 }
 
 #logoPrincipal{
+<<<<<<< HEAD
     position: absolute;
     left: 2.2%;
     top: 24%;
@@ -151,14 +158,19 @@ button{
 }
 
 #logo2{
+=======
+>>>>>>> 27197910b1088483574428b62ed098096909a2ec
     position: absolute;
-    width: 500px;
-    height: 500px;
-    left: 290px;
-    top: 780px;
-    background: red;
-    text-align: center;
-    font-size: 200px;
+    left: 2.2%;
+    top: 24%;
+    z-index: 10;
+}
+
+#estrellas{
+    position: absolute;
+    left: 2.2%;
+    top: 20%;
+    z-index: 5;
 }
 
 
