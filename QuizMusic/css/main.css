@@ -1,5 +1,5 @@
 section{
-    background-image: url("/img/Botones y Fondos/Asset 87.png");
+    background-image: url("/img/Botones y Fondos/Asset 88.png");
     border: black solid;
     width: 1080px;
     height: 2160px;
@@ -171,7 +171,21 @@ button{
     top: 200px;
 }
 
+#fondoCreditos{
+    position: absolute;
+    left: 45px;
+    top: 50px;
+    
+}
 
+#equipo{
+    position: absolute;
+    top: 300px;
+}
+
+.nombreInd{
+    margin-bottom: 100px;
+}
 
 #logo{
     position: absolute;
