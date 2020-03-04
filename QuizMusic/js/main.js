@@ -37,7 +37,7 @@ function toCredits(){
     document.getElementById("juego").style.display = "none";
 }
 
-function toConf(){
+function toInstructions(){
     document.getElementById("menu").style.display = "none";
     document.getElementById("home").style.display = "none";
     document.getElementById("categories").style.display = "none";
@@ -55,6 +55,35 @@ function toGame(){
     document.getElementById("conf").style.display = "none";
     document.getElementById("dontknow").style.display = "none";
     document.getElementById("juego").style.display = "block";
+}
+
+indexIntBar = 0;
+function toSigIns(){
+    if (indexIntBar===5) { //YA HABIENDO LLEGADO AL FINAL, HAY QUE RESETEAR EL INDEX. 
+        indexIntBar=0;
+        toHome();
+        return;
+    }
+
+    var cambioInterfaces = [ 
+        "img/Interfaces y barritas/Asset 124.png",
+        "img/Interfaces y barritas/Asset 125.png",
+        "img/Interfaces y barritas/Asset 126.png",
+        "img/Interfaces y barritas/Asset 127.png",
+        "img/Interfaces y barritas/Asset 128.png"
+    ];
+    var cambioBarritas = [
+        "img/Interfaces y barritas/Asset 129.png",
+        "img/Interfaces y barritas/Asset 130.png",
+        "img/Interfaces y barritas/Asset 131.png",
+        "img/Interfaces y barritas/Asset 132.png",
+        "img/Interfaces y barritas/Asset 133.png"
+    ]
+
+    document.getElementById("interfaz").src=cambioInterfaces[indexIntBar];
+    document.getElementById("barrita").src=cambioBarritas[indexIntBar];
+    indexIntBar++;
+    
 }
 
 var indexArray = 0;

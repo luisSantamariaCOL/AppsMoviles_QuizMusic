@@ -39,6 +39,12 @@ z-index: 5;
     top: 1330px;
 }
 
+#botonHome{
+    position: relative;
+    left: auto;
+    top: 100px;
+}
+
 #botonInstrucciones{
     left: 100px;
     top: 1330px;
@@ -116,6 +122,23 @@ z-index: 5;
     
 }
 
+#interfaz{
+    position: absolute;
+    left: 115px;
+    top: 400px;
+}
+
+#botonSig{
+    position: relative;
+    left: auto;
+    top: 1545px;
+}
+
+#barrita{
+    position: relative;
+    left: auto;
+    top: 1530px;
+}
 
 button{
     background-color: #FFE45F;
