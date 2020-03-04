@@ -1,5 +1,5 @@
 section{
-    background: #FFF3DD;
+    background-image: url("/img/Botones y Fondos/Asset 87.png");
     border: black solid;
     width: 1080px;
     height: 2160px;
@@ -22,6 +22,10 @@ html, body, div, p, h2, a, ul, li, img {
     margin: 0px;
     padding: 0px;
     font-size: 100px; 
+}
+
+.fondoUno{
+    background-image: url("/img/Botones y Fondos/Asset 87.png");
 }
 
 .botonImagen{
@@ -144,9 +148,7 @@ button{
     top: 200px;
 }
 
-#home{
-    background: #FFF3DD;
-}
+
 
 #logo{
     position: absolute;
@@ -163,6 +165,13 @@ button{
     position: absolute;
     left: 2.2%;
     top: 24%;
+    z-index: 1;
+}
+
+#fondoAzul{
+    position: absolute;
+    left: 2px;
+    top: 1637px;
     z-index: 1;
 }
 

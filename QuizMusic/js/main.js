@@ -8,7 +8,7 @@
 
 function toHome(){
     document.getElementById("QuizMusic").className = "animated flipInX";
-    document.getElementById("primerosBotones").className = "botonImagen animated flash";
+    document.getElementById("primerosBotones").className = "botonImagen animated fadeIn";
     document.getElementById("menu").style.display = "none";
     document.getElementById("home").style.display = "block";
     document.getElementById("categories").style.display = "none";
