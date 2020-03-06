@@ -1,161 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>QuizMusic</title>
-        <link rel="stylesheet" href="css/animated.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-<body><!-- BODY-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMusic</title>
+    <link rel="stylesheet" href="css/animated.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- BODY-->
     <!-- SPLASH (SECCION 1)-->
-        <section class="screen fondoUno" id="menu" id="seccion1">
-           
-            <div class="animated zoomIn" id="logoPrincipal">
-                <img src="img/Logo y Splash/Asset 91.png" alt="logo">
-            </div>
-            <div class="animated flash" id="estrellas">
-                <img src="img/Logo y Splash/Asset 90.png" alt="stars">
-            </div>
-            <br>
-            <!-- 
+    <section class="screen fondoUno" id="menu" id="seccion1">
+
+        <div class="animated zoomIn" id="logoPrincipal">
+            <img src="img/Logo y Splash/Asset 91.png" alt="logo">
+        </div>
+        <div class="animated flash" id="estrellas">
+            <img src="img/Logo y Splash/Asset 90.png" alt="stars">
+        </div>
+        <br>
+        <!-- 
                  <h1 class="animated flipInX">Splash del juego</h1>
                  <div class="botones animated flipInX"><button onclick="toHome()">Ingresar</button></div>
             -->
-           
-        <!-- HOME (SECCIÓN 2)-->
-        </section>
-        <section hidden class="screen fondoUno" id="home">
 
-            <!-- fondo
+        <!-- HOME (SECCIÓN 2)-->
+    </section>
+    <section hidden class="screen fondoUno" id="home">
+
+        <!-- fondo
             <div>
                 <img style="z-index: 4; position: absolute; left: 0; width: 1080px; height: 2160px;" src="img/Botones y Fondos/fondo.jpg" alt="fondo">
             </div>
             -->
-            
-
-            <div id="logoEstrella" class="animated tada">
-                <img  src="img/Logo y Splash/Asset 89.png" alt="Stars">
-            </div>
-            <!-- id= "logo2" -->
-            <div id="logoPrincipal">
-                <img src="img/Logo y Splash/Asset 91.png" alt="logo">
-            </div>
-            <div id="estrellas">
-                <img src="img/Logo y Splash/Asset 90.png" alt="stars">
-            </div>
-            
-            <div class="animated fadeIn" id="fondoAzul">
-                <img src="img/Botones y Fondos/Asset 122.png" alt="fondo Azul">
-            </div>
-
-            <!--Boton jugar-->
-           <div id="primerosBotones">
-                <div >
-                    <img class="botonImagen" id="botonInstrucciones" onclick="toInstructions()" src="img/Botones y Fondos/Asset 73.png" alt="Juego">
-
-                </div>
-                <div >
-                    <img class="botonImagen" id="botonCreditos" onclick="toCredits()" src="img/Botones y Fondos/Asset 74.png" alt="Juego">
-
-                </div>
-                <div >
-                    <img class="botonImagen" id="botonJugar" onclick="toCategories()" src="img/Botones y Fondos/Asset 75.png" alt="Juego">
-                </div>
-           </div>
-               
-           
-        </section>
-
-        <!--                                    CATEGORIAS (SECCION 2)-->
-        <section hidden class="screen" id="categories">
-                <!-- fondo-->
-                <div>
-                    <img id="fondoAzulCat" src="img/creditos/Asset 121.png" alt="Fondo azul">
-                </div>
-
-                <!-- to home-->
-                <div>
-                    <img class="botonImagen" id="botonHome" onclick="toHome()" src="img/Botones y Fondos/Asset 76.png" alt="Home">
-                </div>
-                <!-- categories-->
-                <div>
-                    <img class="botonCategorias" onclick="toGame()" src="img/Botones y Fondos/Asset 80.png" alt="Home">
-               
-
-               
-                    <img class="botonCategorias" onclick="toGame()" src="img/Botones y Fondos/Asset 83.png" alt="Home">
-               
-
-             
-                    <img class="botonCategorias" onclick="toGame()" src="img/Botones y Fondos/Asset 81.png" alt="Home">
-               
-                
-              
-                    <img class="botonCategorias" onclick="toGame()" src="img/Botones y Fondos/Asset 82.png" alt="Home">
-                </div>
-                <div>
-                    <img id="estrellaPuntajeTotal" src="img/Estrellas/Asset 108.png" alt="PuntajeTotal">
-                </div>
-        </section>
-
-        <!--                                    CRÉDITOS SECCIÓN (3)-->
-            <section hidden class="screen" id="credits">
-                
-                <div>
-                    <img id="fondoCreditos" src="img/creditos/Asset 120.png" alt="fondo azul">
-                </div>
-                <div>
-                    <img class="botonImagen" id="botonHome" onclick="toHome()" src="img/Botones y Fondos/Asset 76.png" alt="Home">
-                </div>
-                <div id="equipo">
-                    <img class="nombreInd" src="img/creditos/Asset 117.png" alt="Luis Santamaria">
-                    <img class="nombreInd" src="img/creditos/Asset 118.png" alt="Manuela Suescun">
-                    <img src="img/creditos/Asset 119.png" alt="Samuel Rivera">
-                </div>
 
 
+        <div id="logoEstrella" class="animated tada">
+            <img src="img/Logo y Splash/Asset 89.png" alt="Stars">
+        </div>
+        <!-- id= "logo2" -->
+        <div id="logoPrincipal">
+            <img src="img/Logo y Splash/Asset 91.png" alt="logo">
+        </div>
+        <div id="estrellas">
+            <img src="img/Logo y Splash/Asset 90.png" alt="stars">
+        </div>
 
-            </section>
-        <!--                                    INSTRUCCIONES SECCIÓN (4)-->
-        <section hidden class="screen" id="conf">
+        <div class="animated fadeIn" id="fondoAzul">
+            <img src="img/Botones y Fondos/Asset 122.png" alt="fondo Azul">
+        </div>
+
+        <!--Boton jugar-->
+        <div id="primerosBotones">
             <div>
-                <img class="botonImagen" id="botonHome" onclick="toHome()" src="img/Botones y Fondos/Asset 76.png" alt="Home">
+                <img class="botonImagen" id="botonInstrucciones" onclick="toInstructions()"
+                    src="img/Botones y Fondos/Asset 73.png" alt="Juego">
+
             </div>
             <div>
-                <img id="interfaz" src="img/Interfaces y barritas/Asset 123.png" alt="Interfaz1">
+                <img class="botonImagen" id="botonCreditos" onclick="toCredits()"
+                    src="img/Botones y Fondos/Asset 74.png" alt="Juego">
+
             </div>
             <div>
-                <img class="botonImagen" id="botonSig" onclick="toSigIns()" src="img/Botones y Fondos/Asset 79.png" alt="Siguiente">
+                <img class="botonImagen" id="botonJugar" onclick="toCategories()"
+                    src="img/Botones y Fondos/Asset 75.png" alt="Juego">
             </div>
-            <div>
-                <img id="barrita" src="img/Interfaces y barritas/Asset 129.png" alt="Barra">
-            </div>
-        </section>
+        </div>
 
-        <!-- i dont know-->
-        <section hidden class="screen" id="dontknow"></section>
 
-        <!--                                    SECCIÓN JUEGO                                     -->
-        <section hidden class="screen" id="juego">
-            <div id="QuizMusic"> <h1 >QuizMusic</h1> </div>
-            <div id="logoCategorias"></div>
-                <div class="botones2"><br>
-                    <button class="botonrpta" id="casilla1" onclick="respuestas()"></button>
-                    <br>
-                    <button class="botonrpta" id="casilla2" onclick="respuestas()"></button>
-                    <br>
-                    <button class="botonrpta" id="casilla3" onclick="respuestas()"></button>
-                    <br>
-                    <button class="botonrpta" id="casilla4" onclick="respuestas()"></button>
-                    <br>
-                    <button onclick="toHome()">Volver</button>
-                </div>
-                
-            </div>
-        </section>
+    </section>
 
-        <script src="js/main.js"></script>
-    </body>
+    <!--                                    CATEGORIAS (SECCION 2)-->
+    <section hidden class="screen" id="categories">
+        <!-- fondo-->
+        <div>
+            <img id="fondoAzulCat" src="img/creditos/Asset 121.png" alt="Fondo azul">
+        </div>
+
+        <!-- to home-->
+        <div>
+            <img class="botonImagen" id="botonHome" onclick="toHome()" src="img/Botones y Fondos/Asset 76.png"
+                alt="Home">
+        </div>
+        <!-- categories-->
+        <div>
+            <img class="botonCategorias" id="reg" onclick="toGame(0)" src="img/Botones y Fondos/Asset 80.png" alt="Reg">
+
+
+
+            <img class="botonCategorias" id="punk" onclick="toGame(1)" src="img/Botones y Fondos/Asset 83.png"
+                alt="Punk">
+
+
+
+            <img class="botonCategorias" id="rock" onclick="toGame(2)" src="img/Botones y Fondos/Asset 81.png"
+                alt="Rock">
+
+
+
+            <img class="botonCategorias" id="pop" onclick="toGame(3)" src="img/Botones y Fondos/Asset 82.png" alt="Pop">
+        </div>
+        <div>
+            <img id="estrellaPuntajeTotal" src="img/Estrellas/Asset 108.png" alt="PuntajeTotal">
+        </div>
+    </section>
+
+    <!--                                    CRÉDITOS SECCIÓN (3)-->
+    <section hidden class="screen" id="credits">
+
+        <div>
+            <img id="fondoCreditos" src="img/creditos/Asset 120.png" alt="fondo azul">
+        </div>
+        <div>
+            <img class="botonImagen" id="botonHome" onclick="toHome()" src="img/Botones y Fondos/Asset 76.png"
+                alt="Home">
+        </div>
+        <div id="equipo">
+            <img class="nombreInd" src="img/creditos/Asset 117.png" alt="Luis Santamaria">
+            <img class="nombreInd" src="img/creditos/Asset 118.png" alt="Manuela Suescun">
+            <img src="img/creditos/Asset 119.png" alt="Samuel Rivera">
+        </div>
+
+
+
+    </section>
+    <!--                                    INSTRUCCIONES SECCIÓN (4)-->
+    <section hidden class="screen" id="conf">
+        <div>
+            <img class="botonImagen" id="botonHome" onclick="toHome()" src="img/Botones y Fondos/Asset 76.png"
+                alt="Home">
+        </div>
+        <div>
+            <img id="interfaz" src="img/Interfaces y barritas/Asset 123.png" alt="Interfaz1">
+        </div>
+        <div>
+            <img class="botonImagen" id="botonSig" onclick="toSigIns()" src="img/Botones y Fondos/Asset 79.png"
+                alt="Siguiente">
+        </div>
+        <div>
+            <img id="barrita" src="img/Interfaces y barritas/Asset 129.png" alt="Barra">
+        </div>
+    </section>
+
+    <!-- i dont know-->
+    <section hidden class="screen" id="dontknow"></section>
+
+
+    <!--                                    SECCIÓN JUEGO                                     -->
+    <section hidden class="screen" id="juego">
+        <div id="QuizMusic">
+            <h1>QuizMusic</h1>
+        </div>
+        <div id="logoCategorias"></div>
+        <div class="botones2"><br>
+            <button class="botonrpta" id="casilla1" onclick="respuestas()"></button>
+            <br>
+            <button class="botonrpta" id="casilla2" onclick="respuestas()"></button>
+            <br>
+            <button class="botonrpta" id="casilla3" onclick="respuestas()"></button>
+            <br>
+            <button class="botonrpta" id="casilla4" onclick="respuestas()"></button>
+            <br>
+            <button onclick="toHome()">Volver</button>
+        </div>
+
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+
 </html>
