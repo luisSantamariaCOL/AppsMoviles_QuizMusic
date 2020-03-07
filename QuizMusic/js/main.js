@@ -20,7 +20,7 @@ window.onload = function () {
 }
 
 function inicializarReferencias(){
-    secciones[1] = document.getElementById("seccion_1");
+    secciones[1] = document.getElementById("splash");
     secciones[2] = document.getElementById("seccion_2");
     secciones[3] = document.getElementById("seccion_3");
     secciones[4] = document.getElementById("seccion_4");
