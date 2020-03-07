@@ -8,15 +8,14 @@ var resp = [
     ["", "", "", ""]
 ];
 
-var ob1 = "";
-var ob2 = "";
-var ob3 = "";
-var ob4 = "";
+
+var game = 0;
 
 var tiempo_splash = 1600;
 window.onload = function () {
     setTimeout(toHome, tiempo_splash); //EN DOS SEGUNDOS LLAMARA A LA FUNCION CAMBIAR SPLASH  animated flipInX
     respuestas(); //Call
+
 }
 
 
@@ -63,8 +62,10 @@ function toInstructions() {
 }
 
 function toGame(opc) {
+    game = opc;
+    respuestas();
     //console.dir(resp[opc]);
-    //let preguntas = resp[opc];
+    //preguntas = resp[opc];
     document.getElementById("menu").style.display = "none";
     document.getElementById("home").style.display = "none";
     document.getElementById("categories").style.display = "none";
@@ -115,61 +116,199 @@ function respuestas() {
         return;
     }
 
-ob1 = document.getElementById("reg").onclick;
-ob2 = document.getElementById("pop").onclick;
-ob3 = document.getElementById("rock").onclick;
-ob4 = document.getElementById("punk").onclick;
+    /*
+    ob1 = document.getElementById("reg").onclick;
+    ob2 = document.getElementById("pop").onclick;
+    ob3 = document.getElementById("rock").onclick;
+    ob4 = document.getElementById("punk").onclick;
+    */
 
-console.log(ob1);
+    categorias = [{
+            imagen: "imagen 1",
+            puntos: 25,
+            pregunta: [{
+                    opcion: ["Blanco",
+                        "Lovely",
+                        "Carnaval",
+                        "4 babys"
+                    ]
+                },
+                {
+                    opcion: ["11PM",
+                        "Más de ti",
+                        "Hace mucho tiempo",
+                        "Bien loco"
+                    ]
+                },
+                {
+                    opcion: ["Tusa",
+                        "Sin pijama",
+                        "Runaway",
+                        "Me estás matando"
+                    ]
 
-  resp = [
-        [{pregunta:"Blanco",imagen:"",puntaje:20}, "Lovely", "Carnaval", "4 babys"]
-        ["11PM", "Más de ti", "Hace mucho tiempo", "Bien loco"],
-        ["Tusa", "Sin pijama", "Runaway", "Me estás matando"],
-        ["Ateo", "La botella", "Me pones en tensión", "Encantadora"],
-        [  "Lo que pasó, pasó", "Amuleto", "Ayer la vi", "Salió el sol"]
+                },
+                {
+                    opcion: ["Ateo",
+                        "La botella",
+                        "Me pones en tensión",
+                        "Encantadora"
+                    ]
+
+                },
+                {
+                    opcion: ["Lo que pasó, pasó",
+                        "Amuleto",
+                        "Ayer la vi",
+                        "Salió el sol"
+                    ]
+                },
+            ]
+        },
+        {
+            imagen: "imagen 1",
+            puntos: 25,
+            pregunta: [{
+                    opcion: ["God save the queen",
+                        "Life is good",
+                        "The london",
+                        "Highest in the room"
+                    ]
+                },
+                {
+                    opcion: ["Blitzkrieg Bob",
+                        "Saint-Tropez",
+                        "Money in the grave",
+                        "Collard greens"
+                    ]
+
+                },
+                {
+                    opcion: ["All the small things",
+                        "0 of 100",
+                        "Fustal shuffle",
+                        "Sicko mode"
+                    ]
+
+                },
+                {
+                    opcion: ["Basket case",
+                        "Valentino",
+                        "Mickey Mouse is death",
+                        "Marquee moon"
+                    ]
+
+                },
+                {
+                    opcion: ["Where eagles dare",
+                        "Damaged gods",
+                        "Straigth edge",
+                        "Viet nam"
+                    ]
+                },
+            ]
+        },
+        {
+            imagen: "imagen 1",
+            puntos: 25,
+            pregunta: [{
+                    opcion: ["Let it be",
+                        "Hotel California",
+                        "Wicked game",
+                        "Take on me"
+                    ]
+                },
+                {
+                    opcion: ["Hey Joe",
+                        "What's up?",
+                        "Black in black",
+                        "Breake my stride"
+                    ]
+                },
+                {
+                    opcion: ["We will rock you",
+                        "Every breath you take",
+                        "Paradise city",
+                        "Under the bridge"
+                    ]
+                },
+                {
+                    opcion: ["Adiós",
+                        "Agua",
+                        "Maldito duende",
+                        "Sweet dreams"
+                    ]
+                },
+                {
+                    opcion: ["Gimme Shelter",
+                        "Summer of 69",
+                        "November rain",
+                        "Inmigrant song"
+                    ]
+
+                },
+            ]
+        },
+        {
+            imagen: "imagen 1",
+            puntos: 25,
+            pregunta: [{
+                    opcion: ["Young and beautiful",
+                        "Like i love you",
+                        "The bad touch",
+                        "Kiss me"
+                    ]
+                },
+                {
+                    opcion: ["Mirrors",
+                        "Sugar",
+                        "When i was your man",
+                        "Locked out heaven"
+                    ]
+
+                },
+                {
+                    opcion: ["Bad romance",
+                        "Material girl",
+                        "Womanizer",
+                        "La isla bonita"
+                    ]
+
+                },
+                {
+                    opcion: ["Blank space",
+                        "Lose you to love me",
+                        "Party in the U.S.A",
+                        "Cut you off"
+                    ]
+
+                },
+                {
+                    opcion: ["La mordidita",
+                        "Humanos a marte",
+                        "La bicicleta",
+                        "La invitación"
+                    ]
+                },
+            ]
+        }
     ];
+    // var hola = resp[0].pregunta[1].opcion[3];
+    //console.log(hola); salida -> Bien loco
 
-
-
-    resp = [
-        ["God save the queen", "Life is good", "The london", "Highest in the room"],
-        ["Blitzkrieg Bob", "Saint-Tropez", "Money in the grave", "Collard greens"],
-        ["All the small things", "0 of 100", "Fustal shuffle", "Sicko mode"],
-        ["Basket case", "Valentino", "Micke Mouse is death", "Marquee moon"],
-        ["Where eagles dare", "Damaged gods", "Straigth edge", "Viet nam"]
-    ];
-
-
-
-    resp = [
-        ["Let it be", "Hotel California", "Wicked game", "Take on me"],
-        ["Hey Joe", "What's up?", "Black in black", "Breake my stride"],
-        ["We will rock you", "Every breath you take", "Paradise city", "Under the bridge"],
-        ["Adios", "Agua", "Maldito duende", "Sweet dreams"],
-        ["Gimme Shelter", "Summer of 69", "November rain", "Inmigrant song"]
-    ];
-
-
-    resp = [
-        ["Young and beautiful", "Like i love you", "The bad touch", "Kiss me"],
-        ["Mirrors", "Sugar", "When i was your man", "Locked out heaven"],
-        ["Bad romance", "Material girl", "Womanizer", "La isla bonita"],
-        ["Blank space", "Lose you to love me", "Party in the U.S.A", "Cut you off"],
-        ["La mordidita", "Humanos a marte", "La bicicleta", "La invitación"]
-    ];
-
-
+   
+    // categorias[0].pregunta[0].opcioncorrecta   >reg > preguntas > opciones
 
 
     var casillas = [];
     var correcta = aleatorio();
-    casillas[correcta] = resp[indexArray][0]; //Posicionar respuesta CORRECTA
+    var opCorrecta = categorias[game].pregunta[indexArray].opcion[0];
+    casillas[correcta] = opCorrecta; //Posicionar respuesta CORRECTA
 
     var count = 1;
     for (let i = 0; i < 4; i++) { //Posicionar respuestas INCORRECTA
         if (casillas[i] == undefined) {
-            casillas[i] = resp[indexArray][count];
+            casillas[i] = categorias[game].pregunta[indexArray].opcion[count];
             count++;
         }
     }
