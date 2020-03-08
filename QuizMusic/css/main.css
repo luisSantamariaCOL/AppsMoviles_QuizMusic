@@ -89,7 +89,7 @@ z-index: 5;
     width: 1060px;
     height: 500px;
     left: 0px;
-    top: 1200px;
+    top: 820px;
     text-align: center;
     color: #2B2449;
 }
@@ -138,6 +138,31 @@ z-index: 5;
     position: relative;
     left: auto;
     top: 1530px;
+}
+
+#bar{
+    position: relative;
+    left: auto;
+    top: 10px;
+}
+
+.overhead {
+    margin-top: 30px;
+    margin-left: -280px;
+}
+
+.stars {
+    width: 180px;
+    height: 180px;
+    object-position: left;
+}
+
+#next2Stars {
+    margin-left: 100px;
+}
+
+#timer {
+    margin-top: 50px;
 }
 
 button{
