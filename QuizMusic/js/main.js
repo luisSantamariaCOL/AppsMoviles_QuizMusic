@@ -23,25 +23,32 @@ function toSection(sect){
     }
     document.getElementById(sect).style.display = "block";
     indexArray = 0;
+    lives = 3;
+    document.getElementById("thirdChance").src = "img/Estrellas/Asset 108.png"
+    document.getElementById("secondChance").src = "img/Estrellas/Asset 108.png"
+    document.getElementById("lastChance").src = "img/Estrellas/Asset 108.png"
 }
 
 function toGame(opc) {
     game = opc;
+
+    ctr = 5;
+    while (ctr > 0) {
+        index = Math.floor(Math.random() * ctr);
+        ctr--;
+        temp = categorias[game].pregunta[ctr];
+        categorias[game].pregunta[ctr] = categorias[game].pregunta[index];
+        categorias[game].pregunta[index] = temp;
+    }
     respuestas();
-    //console.dir(resp[opc]);
-    //preguntas = resp[opc];
-    document.getElementById("menu").style.display = "none";
-    document.getElementById("home").style.display = "none";
-    document.getElementById("categories").style.display = "none";
-    document.getElementById("credits").style.display = "none";
-    document.getElementById("instruct").style.display = "none";
-    document.getElementById("juego").style.display = "block";
+    toSection('juego');
 }
 
 function toSigIns() {
     if (indexIntBar === 5) { //YA HABIENDO LLEGADO AL FINAL, HAY QUE RESETEAR EL INDEX. 
         indexIntBar = 0;
         toSection('home');
+        document.getElementById("interfaz").src = "img/Interfaces y barritas/Asset 123.png";
         return;
     }
 
@@ -52,16 +59,8 @@ function toSigIns() {
         "img/Interfaces y barritas/Asset 127.png",
         "img/Interfaces y barritas/Asset 128.png"
     ];
-    var cambioBarritas = [
-        "img/Interfaces y barritas/Asset 129.png",
-        "img/Interfaces y barritas/Asset 130.png",
-        "img/Interfaces y barritas/Asset 131.png",
-        "img/Interfaces y barritas/Asset 132.png",
-        "img/Interfaces y barritas/Asset 133.png"
-    ]
 
     document.getElementById("interfaz").src = cambioInterfaces[indexIntBar];
-    document.getElementById("barrita").src = cambioBarritas[indexIntBar];
     indexIntBar++;
 }
 
@@ -77,26 +76,23 @@ var bars = [
 function respuestas() {
     if (indexArray === 5) { //YA HABIENDO LLEGADO AL FINAL, HAY QUE RESETEAR EL INDEX. 
         indexArray = 0;
+        lives = 3;
+        document.getElementById("thirdChance").src = "img/Estrellas/Asset 108.png"
+        document.getElementById("secondChance").src = "img/Estrellas/Asset 108.png"
+        document.getElementById("lastChance").src = "img/Estrellas/Asset 108.png"
+        alert("Enhorabuena!");
         toSection('categories');
         return;
     }
     document.getElementById("bar").src = bars[indexArray+1];
+    document.getElementById("logoCategorias").src = categorias[game].pregunta[indexArray].opcion[4];
 
     var casillas = [];
     var correcta = aleatorio();
     var opCorrecta = categorias[game].pregunta[indexArray].opcion[0];
-    //casillas[correcta] = opCorrecta; //Posicionar respuesta CORRECTA
 
-    //var count = 1;
-    /*for (let i = 0; i < 4; i++) { //Posicionar respuestas INCORRECTA
-        if (casillas[i] == undefined) {
-            casillas[i] = categorias[game].pregunta[indexArray].opcion[count];
-            count++;
-        }
-    }*/
-
-    for (let i = 0; i < 4; i++) {
-        var aux = aleatorio();
+    for (let i = 0; i < 4; i++) { // Distribución de respuestas
+        var aux = aleatorio(4);
         if(casillas[aux] == undefined) {
             casillas[aux] = categorias[game].pregunta[indexArray].opcion[i];
         }else {
@@ -134,6 +130,7 @@ function verify(choice) {
         }else {
             indexArray = 0;
             lives = 3;
+            alert("Se acabaron tus vidas");
             toSection('categories');
             document.getElementById("thirdChance").src = "img/Estrellas/Asset 108.png"
             document.getElementById("secondChance").src = "img/Estrellas/Asset 108.png"
@@ -142,31 +139,33 @@ function verify(choice) {
     }
 }
 
-function aleatorio() {
-    return Math.floor(Math.random() * (4));
+function aleatorio(num) {
+    return Math.floor(Math.random() * (num));
 }
 
 categorias = [{
-    imagen: "imagen 1",
     pregunta: [{
             opcion: ["Blanco",
                 "Lovely",
                 "Carnaval",
-                "4 babys"
+                "4 babys",
+                "img/Estrellas Reggaeton/Asset 114.png"
             ]
         },
         {
             opcion: ["11PM",
                 "Más de ti",
                 "Hace mucho tiempo",
-                "Bien loco"
+                "Bien loco",
+                "img/Estrellas Reggaeton/Asset 8.png"
             ]
         },
         {
             opcion: ["Tusa",
                 "Sin pijama",
                 "Runaway",
-                "Me estás matando"
+                "Me estás matando",
+                "img/Estrellas Reggaeton/Asset 7.png"
             ]
 
         },
@@ -174,7 +173,8 @@ categorias = [{
             opcion: ["Ateo",
                 "La botella",
                 "Me pones en tensión",
-                "Encantadora"
+                "Encantadora",
+                "img/Estrellas Reggaeton/Asset 6.png"
             ]
 
         },
@@ -182,25 +182,27 @@ categorias = [{
             opcion: ["Lo que pasó, pasó",
                 "Amuleto",
                 "Ayer la vi",
-                "Salió el sol"
+                "Salió el sol",
+                "img/Estrellas Reggaeton/Asset 9.png"
             ]
         },
     ]
 },
 {
-    imagen: "imagen 1",
     pregunta: [{
             opcion: ["God save the queen",
                 "Life is good",
                 "The london",
-                "Highest in the room"
+                "Highest in the room",
+                "img/Estrellas Punk/Asset 52.png"
             ]
         },
         {
-            opcion: ["Blitzkrieg Bob",
+            opcion: ["Blitzkrieg Bop",
                 "Saint-Tropez",
                 "Money in the grave",
-                "Collard greens"
+                "Collard greens",
+                "img/Estrellas Punk/Asset 50.png"
             ]
 
         },
@@ -208,7 +210,8 @@ categorias = [{
             opcion: ["All the small things",
                 "0 of 100",
                 "Fustal shuffle",
-                "Sicko mode"
+                "Sicko mode",
+                "img/Estrellas Punk/Asset 49.png"
             ]
 
         },
@@ -216,7 +219,8 @@ categorias = [{
             opcion: ["Basket case",
                 "Valentino",
                 "Mickey Mouse is death",
-                "Marquee moon"
+                "Marquee moon",
+                "img/Estrellas Punk/Asset 56.png"
             ]
 
         },
@@ -224,65 +228,71 @@ categorias = [{
             opcion: ["Where eagles dare",
                 "Damaged gods",
                 "Straigth edge",
-                "Viet nam"
+                "Viet nam",
+                "img/Estrellas Punk/Asset 54.png"
             ]
         },
     ]
 },
 {
-    imagen: "imagen 1",
     pregunta: [{
             opcion: ["Let it be",
                 "Hotel California",
                 "Wicked game",
-                "Take on me"
+                "Take on me",
+                "img/Estrellas Rock/Asset 42.png"
             ]
         },
         {
             opcion: ["Hey Joe",
                 "What's up?",
                 "Black in black",
-                "Breake my stride"
+                "Breake my stride",
+                "img/Estrellas Rock/Asset 40.png"
             ]
         },
         {
             opcion: ["We will rock you",
                 "Every breath you take",
                 "Paradise city",
-                "Under the bridge"
+                "Under the bridge",
+                "img/Estrellas Rock/Asset 38.png"
             ]
         },
         {
             opcion: ["Adiós",
                 "Agua",
                 "Maldito duende",
-                "Sweet dreams"
+                "Sweet dreams",
+                "img/Estrellas Rock/Asset 30.png"
             ]
         },
         {
             opcion: ["Gimme Shelter",
                 "Summer of 69",
                 "November rain",
-                "Inmigrant song"
+                "Inmigrant song",
+                "img/Estrellas Rock/Asset 36.png"
             ]
 
         },
     ]
 },
 {
-    imagen: "imagen 1",
     pregunta: [{
             opcion: ["Young and beautiful",
                 "Like i love you",
                 "The bad touch",
-                "Kiss me"
+                "Kiss me",
+                "img/Estrellas Pop/Asset 26.png"
             ]
         },
         {
             opcion: ["Mirrors",
                 "Sugar",
                 "When i was your man",
-                "Locked out heaven"
+                "Locked out heaven",
+                "img/Estrellas Pop/Asset 25.png"
             ]
 
         },
@@ -290,7 +300,8 @@ categorias = [{
             opcion: ["Bad romance",
                 "Material girl",
                 "Womanizer",
-                "La isla bonita"
+                "La isla bonita",
+                "img/Estrellas Pop/Asset 23.png"
             ]
 
         },
@@ -298,7 +309,8 @@ categorias = [{
             opcion: ["Blank space",
                 "Lose you to love me",
                 "Party in the U.S.A",
-                "Cut you off"
+                "Cut you off",
+                "img/Estrellas Pop/Asset 20.png"
             ]
 
         },
@@ -306,40 +318,10 @@ categorias = [{
             opcion: ["La mordidita",
                 "Humanos a marte",
                 "La bicicleta",
-                "La invitación"
+                "La invitación",
+                "img/Estrellas Pop/Asset 18.png"
             ]
         },
     ]
 }
 ];
-
-/*
- var secciones = [];//en este array creare una funcion que me va a inicializar 
-  var tiempo_splash=2000;
-  window.onload = function (){
-      inicializarReferencias();
-      setTimeout(cambiarSplash, tiempo_splash);   //EN DOS SEGUNDOS LLAMARA A LA FUNCION CAMBIAR SPLASH
-  }
-
-
-  function inicializarReferencias(){ //solo una vez buscar esas referencias
-      secciones[1] = document.getElementById("seccion1");
-      secciones[2] = document.getElementById("seccion2");
-      secciones[3] = document.getElementById("seccion3");
-      secciones[4] = document.getElementById("seccion4");
-      secciones[5] = document.getElementById("seccion5");
-  }
-
-  function cambiarSplash(){//en la seccion 1 
-      secciones[1].className = "splash  oculto"; //propiedad que permite acceder al class splash
-      //ocultare la seccion 1 que es splash
-      secciones[2].className = "home";
-  }
-  
-  function cambiarSeccion(id_seccion){ 
-      for(var i in secciones){//coge todas las secciones y las oculta
-          secciones[i].classList.add("oculto");
-      }
-      secciones[id_seccion].classList.remove("oculto");
-  }
-  */

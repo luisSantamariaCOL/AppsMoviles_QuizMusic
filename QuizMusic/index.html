@@ -139,9 +139,6 @@
             <img class="botonImagen" id="botonSig" onclick="toSigIns()" src="img/Botones y Fondos/Asset 79.png"
                 alt="Siguiente">
         </div>
-        <div>
-            <img id="barrita" src="img/Interfaces y barritas/Asset 129.png" alt="Barra">
-        </div>
     </section>
 
     <!--                                    SECCIÓN JUEGO                                     -->
@@ -156,7 +153,7 @@
             <img class="botonImagen" id ="next2Stars" onclick="toSection('categories')" src="img/Botones y Fondos/Asset 76.png"
                 alt="Home">
         </div>
-        <div id="logoCategorias"></div>
+        <img id="logoCategorias"></img>
             <div class="botones2"><br>
                 <button class="botonrpta" id="casilla1" onclick="verify('casilla1')"></button>
                 <br>
@@ -166,13 +163,15 @@
                 <br>
                 <button class="botonrpta" id="casilla4" onclick="verify('casilla4')"></button>
                 <br>
-                <img id="timer" src="img/Temporizador/Asset 113.png"
-                    alt="Home">
+                <div class="container">
+                  <img id="timer" src="img/Temporizador/Asset 113.png"
+                    alt="Home" style>
+                    <div id="timerNumb">10</div>
+                </div>
+                
             </div>
         </div>
     </section>
 
     <script src="js/main.js"></script>
 </body>
-
-</html>
