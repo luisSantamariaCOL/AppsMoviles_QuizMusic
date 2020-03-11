@@ -263,7 +263,6 @@ button{
     z-index: 0;
 }
 
-
 .circle {
     width: 100px;
     height: 100px;
@@ -282,4 +281,12 @@ button{
     padding: 100px;
     margin-top: 100px;
     margin-left: 400px;
+}
+
+.true {
+    background-color: yellowgreen;
+}
+
+.false {
+    background-color: red;
 }

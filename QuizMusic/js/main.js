@@ -24,9 +24,20 @@ function toSection(sect){
     document.getElementById(sect).style.display = "block";
     indexArray = 0;
     lives = 3;
+    time = 10;
+    gains = 25;
     document.getElementById("thirdChance").src = "img/Estrellas/Asset 108.png"
     document.getElementById("secondChance").src = "img/Estrellas/Asset 108.png"
     document.getElementById("lastChance").src = "img/Estrellas/Asset 108.png"
+}
+
+function returnConfirm () {
+    var opt = window.confirm("¿Seguro? No se guardará tu progreso.")
+    if (opt) {
+        score = 0;
+        clearInterval(update);
+        toSection('categories');
+    }
 }
 
 function toGame(opc) {
@@ -77,13 +88,28 @@ function respuestas() {
     if (indexArray === 5) { //YA HABIENDO LLEGADO AL FINAL, HAY QUE RESETEAR EL INDEX. 
         indexArray = 0;
         lives = 3;
+        gains = 25;
         document.getElementById("thirdChance").src = "img/Estrellas/Asset 108.png"
         document.getElementById("secondChance").src = "img/Estrellas/Asset 108.png"
         document.getElementById("lastChance").src = "img/Estrellas/Asset 108.png"
-        alert("Enhorabuena!");
+        alert("Categoría completada!");
         toSection('categories');
         return;
     }
+    document.getElementById("casilla1").classList.remove("true");
+    document.getElementById("casilla2").classList.remove("true");
+    document.getElementById("casilla3").classList.remove("true");
+    document.getElementById("casilla4").classList.remove("true");
+    document.getElementById("casilla1").classList.remove("false");
+    document.getElementById("casilla2").classList.remove("false");
+    document.getElementById("casilla3").classList.remove("false");
+    document.getElementById("casilla4").classList.remove("false");
+
+    time = 10;
+    gains = 25;
+    document.getElementById("timerNumb").innerHTML = 10;
+    update = setInterval(timing, 1000);
+
     document.getElementById("bar").src = bars[indexArray+1];
     document.getElementById("logoCategorias").src = categorias[game].pregunta[indexArray].opcion[4];
 
@@ -108,14 +134,17 @@ function respuestas() {
 
 score = 0;
 lives = 3;
+gains = 25;
 
 function verify(choice) {
     if(document.getElementById(choice).innerHTML == categorias[game].pregunta[indexArray].opcion[0]) {
-        score = score + 25;
+        score = score + gains;
         indexArray ++;
-        respuestas();
+        document.getElementById(choice).classList.add("true");
+        clearInterval(update);
+        setTimeout(respuestas, 1000);
     }else {
-        score = score + 10;
+        document.getElementById(choice).classList.add("false");
         if(lives === 3) {
             document.getElementById("thirdChance").src = "img/Estrellas/Asset 109.png"
             lives --;
@@ -130,12 +159,27 @@ function verify(choice) {
         }else {
             indexArray = 0;
             lives = 3;
+            clearInterval(update);
             alert("Se acabaron tus vidas");
             toSection('categories');
-            document.getElementById("thirdChance").src = "img/Estrellas/Asset 108.png"
-            document.getElementById("secondChance").src = "img/Estrellas/Asset 108.png"
-            document.getElementById("lastChance").src = "img/Estrellas/Asset 108.png"
         }
+    }
+}
+
+function timing() {
+    time = time - 1;
+    gains = gains - 2;
+    if (time<10) {
+        document.getElementById("timerNumb").innerHTML = time;
+    }
+    if (time===0) {
+        clearInterval(update);
+        indexArray++;
+        document.getElementById("casilla1").classList.add("false");
+        document.getElementById("casilla2").classList.add("false");
+        document.getElementById("casilla3").classList.add("false");
+        document.getElementById("casilla4").classList.add("false");
+        setTimeout(respuestas, 1000);
     }
 }
 
@@ -157,7 +201,7 @@ categorias = [{
                 "Más de ti",
                 "Hace mucho tiempo",
                 "Bien loco",
-                "img/Estrellas Reggaeton/Asset 8.png"
+                "img/Estrellas Reggaeton/Asset 12.png"
             ]
         },
         {
@@ -165,7 +209,7 @@ categorias = [{
                 "Sin pijama",
                 "Runaway",
                 "Me estás matando",
-                "img/Estrellas Reggaeton/Asset 7.png"
+                "img/Estrellas Reggaeton/Asset 11.png"
             ]
 
         },
@@ -174,7 +218,7 @@ categorias = [{
                 "La botella",
                 "Me pones en tensión",
                 "Encantadora",
-                "img/Estrellas Reggaeton/Asset 6.png"
+                "img/Estrellas Reggaeton/Asset 10.png"
             ]
 
         },
@@ -194,7 +238,7 @@ categorias = [{
                 "Life is good",
                 "The london",
                 "Highest in the room",
-                "img/Estrellas Punk/Asset 52.png"
+                "img/Estrellas Punk/Asset 53.png"
             ]
         },
         {
@@ -202,7 +246,7 @@ categorias = [{
                 "Saint-Tropez",
                 "Money in the grave",
                 "Collard greens",
-                "img/Estrellas Punk/Asset 50.png"
+                "img/Estrellas Punk/Asset 51.png"
             ]
 
         },
@@ -220,14 +264,14 @@ categorias = [{
                 "Valentino",
                 "Mickey Mouse is death",
                 "Marquee moon",
-                "img/Estrellas Punk/Asset 56.png"
+                "img/Estrellas Punk/Asset 57.png"
             ]
 
         },
         {
             opcion: ["Where eagles dare",
                 "Damaged gods",
-                "Straigth edge",
+                "Straight edge",
                 "Viet nam",
                 "img/Estrellas Punk/Asset 54.png"
             ]
@@ -264,7 +308,7 @@ categorias = [{
                 "Agua",
                 "Maldito duende",
                 "Sweet dreams",
-                "img/Estrellas Rock/Asset 30.png"
+                "img/Estrellas Rock/Asset 31.png"
             ]
         },
         {
@@ -284,7 +328,7 @@ categorias = [{
                 "Like i love you",
                 "The bad touch",
                 "Kiss me",
-                "img/Estrellas Pop/Asset 26.png"
+                "img/Estrellas Pop/Asset 27.png"
             ]
         },
         {
@@ -310,7 +354,7 @@ categorias = [{
                 "Lose you to love me",
                 "Party in the U.S.A",
                 "Cut you off",
-                "img/Estrellas Pop/Asset 20.png"
+                "img/Estrellas Pop/Asset 21.png"
             ]
 
         },
@@ -319,7 +363,7 @@ categorias = [{
                 "Humanos a marte",
                 "La bicicleta",
                 "La invitación",
-                "img/Estrellas Pop/Asset 18.png"
+                "img/Estrellas Pop/Asset 19.png"
             ]
         },
     ]
