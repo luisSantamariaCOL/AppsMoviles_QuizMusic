@@ -22,6 +22,7 @@ function toSection(sect){
         sections[i].style.display = "none";
     }
     document.getElementById(sect).style.display = "block";
+    score = 0;
     indexArray = 0;
     lives = 3;
     time = 10;
@@ -42,7 +43,7 @@ function returnConfirm () {
 
 function toGame(opc) {
     game = opc;
-
+    scoreSpot = document.getElementById("score"+opc);
     ctr = 5;
     while (ctr > 0) {
         index = Math.floor(Math.random() * ctr);
@@ -51,8 +52,8 @@ function toGame(opc) {
         categorias[game].pregunta[ctr] = categorias[game].pregunta[index];
         categorias[game].pregunta[index] = temp;
     }
-    respuestas();
     toSection('juego');
+    respuestas();
 }
 
 function toSigIns() {
@@ -86,6 +87,15 @@ var bars = [
 
 function respuestas() {
     if (indexArray === 5) { //YA HABIENDO LLEGADO AL FINAL, HAY QUE RESETEAR EL INDEX. 
+        if(score>scoreSpot.innerHTML) {
+            scoreSpot.innerHTML = score;
+        }
+        total = parseInt(document.getElementById("score0").innerHTML) + 
+        parseInt(document.getElementById("score1").innerHTML) + 
+        parseInt(document.getElementById("score2").innerHTML) + 
+        parseInt(document.getElementById("score3").innerHTML);
+        document.getElementById("totalScore").innerHTML = total;
+        score = 0;
         indexArray = 0;
         lives = 3;
         gains = 25;
@@ -152,11 +162,9 @@ function verify(choice) {
         if (lives === 2) {
             document.getElementById("secondChance").src = "img/Estrellas/Asset 109.png"
             lives--;
-        }else
-        if (lives === 1) {
+        }else {
             document.getElementById("lastChance").src = "img/Estrellas/Asset 109.png"
             lives--;
-        }else {
             indexArray = 0;
             lives = 3;
             clearInterval(update);
