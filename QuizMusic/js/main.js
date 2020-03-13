@@ -173,6 +173,7 @@ function verify(choice) {
             toSection('categories');
         }
     }
+
 }
 
 function timing() {

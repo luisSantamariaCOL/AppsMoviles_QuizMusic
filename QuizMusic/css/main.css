@@ -95,12 +95,13 @@ z-index: 5;
 }
 
 .botonrpta{
-    width: 65%;
+    width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 23px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 60px;
+    cursor: pointer;
+    font-size: 55px;
     color: #2B2449;
 }
 
@@ -116,10 +117,8 @@ z-index: 5;
     height: 800px;
     left: 145px;
     top: 400px;
-    background: red;
     text-align: center;
     border-radius: 50%;
-    
 }
 
 #interfaz{
@@ -285,11 +284,11 @@ button{
 }
 
 .true {
-    background-color: yellowgreen;
+    background-image: url("/img/Botones VF/Asset 103.png");
 }
 
 .false {
-    background-color: red;
+    background-image: url("/img/Botones VF/Asset 102.png");
 }
 
 .scores {
@@ -317,4 +316,29 @@ button{
     left: 50%;
     z-index: 10;
     transform: translate(-50%, -50%);
+}
+
+.contenedor{
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 23px;
+}
+ 
+.texto-encima{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.centrado{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fondoImgArtista{
+    position: absolute;
+    scale: 1.5;
+    left: 200px;
 }
