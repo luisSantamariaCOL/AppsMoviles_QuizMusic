@@ -1,5 +1,6 @@
 var indexArray = 0;
 indexIntBar = 0;
+var animacion = document.getElementById("logoCategorias");
 
 var sections = [];
 sections[0] = document.getElementById("menu");
@@ -66,10 +67,10 @@ function toSigIns() {
 
     var cambioInterfaces = [
         "img/Interfaces y barritas/Asset 124.png",
-        "img/Interfaces y barritas/Asset 125.png",
-        "img/Interfaces y barritas/Asset 126.png",
         "img/Interfaces y barritas/Asset 127.png",
-        "img/Interfaces y barritas/Asset 128.png"
+        "img/Interfaces y barritas/Asset 126.png",
+        "img/Interfaces y barritas/Asset 128.png",
+        "img/Interfaces y barritas/Asset 125.png"
     ];
 
     document.getElementById("interfaz").src = cambioInterfaces[indexIntBar];
@@ -90,6 +91,7 @@ function respuestas() {
         if(score>scoreSpot.innerHTML) {
             scoreSpot.innerHTML = score;
         }
+        animacion.className = ("animated tada");
         total = parseInt(document.getElementById("score0").innerHTML) + 
         parseInt(document.getElementById("score1").innerHTML) + 
         parseInt(document.getElementById("score2").innerHTML) + 
@@ -147,6 +149,7 @@ lives = 3;
 gains = 25;
 
 function verify(choice) {
+    animacion.className = ("animated zoomIn");
     if(document.getElementById(choice).innerHTML == categorias[game].pregunta[indexArray].opcion[0]) {
         score = score + gains;
         document.getElementById("logoCategorias").src = categorias[game].pregunta[indexArray].opcion[5];
@@ -173,7 +176,6 @@ function verify(choice) {
             toSection('categories');
         }
     }
-
 }
 
 function timing() {
