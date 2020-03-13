@@ -1,8 +1,6 @@
 var indexArray = 0;
 indexIntBar = 0;
 
-
-//SECCIONE
 var sections = [];
 sections[0] = document.getElementById("menu");
 sections[1] = document.getElementById("home");
@@ -151,6 +149,7 @@ gains = 25;
 function verify(choice) {
     if(document.getElementById(choice).innerHTML == categorias[game].pregunta[indexArray].opcion[0]) {
         score = score + gains;
+        document.getElementById("logoCategorias").src = categorias[game].pregunta[indexArray].opcion[5];
         indexArray ++;
         document.getElementById(choice).classList.add("true");
         clearInterval(update);
@@ -203,7 +202,8 @@ categorias = [{
                 "Lovely",
                 "Carnaval",
                 "4 babys",
-                "img/Estrellas Reggaeton/Asset 114.png"
+                "img/Estrellas Reggaeton/Asset 114.png",
+                "img/Estrellas Reggaeton/Asset 116.png"
             ]
         },
         {
@@ -211,7 +211,8 @@ categorias = [{
                 "Más de ti",
                 "Hace mucho tiempo",
                 "Bien loco",
-                "img/Estrellas Reggaeton/Asset 12.png"
+                "img/Estrellas Reggaeton/Asset 12.png",
+                "img/Estrellas Reggaeton/Asset 1.png"
             ]
         },
         {
@@ -219,7 +220,8 @@ categorias = [{
                 "Sin pijama",
                 "Runaway",
                 "Me estás matando",
-                "img/Estrellas Reggaeton/Asset 11.png"
+                "img/Estrellas Reggaeton/Asset 11.png",
+                "img/Estrellas Reggaeton/Asset 4.png"
             ]
 
         },
@@ -228,7 +230,8 @@ categorias = [{
                 "La botella",
                 "Me pones en tensión",
                 "Encantadora",
-                "img/Estrellas Reggaeton/Asset 10.png"
+                "img/Estrellas Reggaeton/Asset 10.png",
+                "img/Estrellas Reggaeton/Asset 3.png"
             ]
 
         },
@@ -237,7 +240,8 @@ categorias = [{
                 "Amuleto",
                 "Ayer la vi",
                 "Salió el sol",
-                "img/Estrellas Reggaeton/Asset 9.png"
+                "img/Estrellas Reggaeton/Asset 9.png",
+                "img/Estrellas Reggaeton/Asset 2.png"
             ]
         },
     ]
@@ -248,7 +252,8 @@ categorias = [{
                 "Life is good",
                 "The london",
                 "Highest in the room",
-                "img/Estrellas Punk/Asset 53.png"
+                "img/Estrellas Punk/Asset 53.png",
+                "img/Estrellas Punk/Asset 46.png"
             ]
         },
         {
@@ -256,7 +261,8 @@ categorias = [{
                 "Saint-Tropez",
                 "Money in the grave",
                 "Collard greens",
-                "img/Estrellas Punk/Asset 51.png"
+                "img/Estrellas Punk/Asset 51.png",
+                "img/Estrellas Punk/Asset 47.png"
             ]
 
         },
@@ -265,7 +271,8 @@ categorias = [{
                 "0 of 100",
                 "Fustal shuffle",
                 "Sicko mode",
-                "img/Estrellas Punk/Asset 49.png"
+                "img/Estrellas Punk/Asset 49.png",
+                "img/Estrellas Punk/Asset 43.png"
             ]
 
         },
@@ -274,7 +281,8 @@ categorias = [{
                 "Valentino",
                 "Mickey Mouse is death",
                 "Marquee moon",
-                "img/Estrellas Punk/Asset 57.png"
+                "img/Estrellas Punk/Asset 57.png",
+                "img/Estrellas Punk/Asset 44.png"
             ]
 
         },
@@ -283,7 +291,8 @@ categorias = [{
                 "Damaged gods",
                 "Straight edge",
                 "Viet nam",
-                "img/Estrellas Punk/Asset 55(1).png"
+                "img/Estrellas Punk/Asset 55.png",
+                "img/Estrellas Punk/Asset 45.png"
             ]
         },
     ]
@@ -294,7 +303,8 @@ categorias = [{
                 "Hotel California",
                 "Wicked game",
                 "Take on me",
-                "img/Estrellas Rock/Asset 42.png"
+                "img/Estrellas Rock/Asset 42.png",
+                "img/Estrellas Rock/Asset 32.png"
             ]
         },
         {
@@ -302,7 +312,8 @@ categorias = [{
                 "What's up?",
                 "Black in black",
                 "Breake my stride",
-                "img/Estrellas Rock/Asset 40.png"
+                "img/Estrellas Rock/Asset 40.png",
+                "img/Estrellas Rock/Asset 33.png"
             ]
         },
         {
@@ -310,7 +321,8 @@ categorias = [{
                 "Every breath you take",
                 "Paradise city",
                 "Under the bridge",
-                "img/Estrellas Rock/Asset 38.png"
+                "img/Estrellas Rock/Asset 38.png",
+                "img/Estrellas Rock/Asset 35.png"
             ]
         },
         {
@@ -318,7 +330,8 @@ categorias = [{
                 "Agua",
                 "Maldito duende",
                 "Sweet dreams",
-                "img/Estrellas Rock/Asset 31.png"
+                "img/Estrellas Rock/Asset 31.png",
+                "img/Estrellas Rock/Asset 29.png"
             ]
         },
         {
@@ -326,7 +339,8 @@ categorias = [{
                 "Summer of 69",
                 "November rain",
                 "Inmigrant song",
-                "img/Estrellas Rock/Asset 36.png"
+                "img/Estrellas Rock/Asset 36.png",
+                "img/Estrellas Rock/Asset 28.png"
             ]
 
         },
@@ -338,7 +352,8 @@ categorias = [{
                 "Like i love you",
                 "The bad touch",
                 "Kiss me",
-                "img/Estrellas Pop/Asset 27.png"
+                "img/Estrellas Pop/Asset 27.png",
+                "img/Estrellas Pop/Asset 17.png"
             ]
         },
         {
@@ -346,7 +361,8 @@ categorias = [{
                 "Sugar",
                 "When i was your man",
                 "Locked out heaven",
-                "img/Estrellas Pop/Asset 25.png"
+                "img/Estrellas Pop/Asset 25.png",
+                "img/Estrellas Pop/Asset 16.png"
             ]
 
         },
@@ -355,7 +371,8 @@ categorias = [{
                 "Material girl",
                 "Womanizer",
                 "La isla bonita",
-                "img/Estrellas Pop/Asset 23.png"
+                "img/Estrellas Pop/Asset 23.png",
+                "img/Estrellas Pop/Asset 13.png"
             ]
 
         },
@@ -364,7 +381,8 @@ categorias = [{
                 "Lose you to love me",
                 "Party in the U.S.A",
                 "Cut you off",
-                "img/Estrellas Pop/Asset 21.png"
+                "img/Estrellas Pop/Asset 21.png",
+                "img/Estrellas Pop/Asset 15.png"
             ]
 
         },
@@ -373,7 +391,8 @@ categorias = [{
                 "Humanos a marte",
                 "La bicicleta",
                 "La invitación",
-                "img/Estrellas Pop/Asset 19.png"
+                "img/Estrellas Pop/Asset 19.png",
+                "img/Estrellas Pop/Asset 14.png"
             ]
         },
     ]
