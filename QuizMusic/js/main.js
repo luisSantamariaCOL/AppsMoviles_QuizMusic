@@ -1,6 +1,8 @@
 var indexArray = 0;
 indexIntBar = 0;
 
+
+//SECCIONE
 var sections = [];
 sections[0] = document.getElementById("menu");
 sections[1] = document.getElementById("home");
