@@ -283,7 +283,7 @@ categorias = [{
                 "Damaged gods",
                 "Straight edge",
                 "Viet nam",
-                "img/Estrellas Punk/Asset 54.png"
+                "img/Estrellas Punk/Asset 55(1).png"
             ]
         },
     ]
