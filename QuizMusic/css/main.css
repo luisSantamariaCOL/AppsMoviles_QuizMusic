@@ -218,6 +218,11 @@ button{
     cursor: pointer;
 }
 
+#punk{
+    position: relative;
+    left: -17px;
+}
+
 #fondoAzulCat{
     position: absolute;
     left: 2px;
@@ -293,8 +298,38 @@ button{
 
 .scores {
     color: #2B2449;
-    position: relative;
+    position: absolute;
+    text-align: left;
+    top: 435px;
+    left: 910px;
     display: inline-block;
+    
+}
+
+.avenir{
+    font-family: Avenir Black;
+}
+
+#score0{
+    position: absolute;
+    top: -15px;
+    font-size: 90px;
+}
+
+#score1{
+    position: absolute;
+    top: 390px;
+    font-size: 90px;
+}
+#score2{
+    position: absolute;
+    top: 720px;
+    font-size: 90px;
+}
+#score3{
+    position: absolute;
+    top: 1093px;
+    font-size: 90px;
 }
 
 #totalScoreStar {
@@ -306,6 +341,7 @@ button{
     position: absolute;
     top: 62%;
     left: 50%;
+    font-size: 160px;
     z-index: 10;
     transform: translate(-50%, -50%);
 }
@@ -337,8 +373,14 @@ button{
     transform: translate(-50%, -50%);
 }
 
+.contenedorArtista{
+    position: absolute;
+    
+}
+
 .fondoImgArtista{
     position: absolute;
-    scale: 1.5;
-    left: 200px;
+    width: 925px; 
+    height: 925px;
+    left: 88px;
 }
