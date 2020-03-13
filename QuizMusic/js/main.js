@@ -131,7 +131,7 @@ function respuestas() {
 
     for (let i = 0; i < 4; i++) { // Distribución de respuestas
         var aux = aleatorio(4);
-        if(casillas[aux] == undefined) {
+        if(!casillas[aux]) {
             casillas[aux] = categorias[game].pregunta[indexArray].opcion[i];
         }else {
             i --;
