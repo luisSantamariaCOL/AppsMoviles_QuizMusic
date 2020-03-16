@@ -105,7 +105,6 @@ function respuestas() {
         document.getElementById("thirdChance").src = "img/Estrellas/Asset 108.png"
         document.getElementById("secondChance").src = "img/Estrellas/Asset 108.png"
         document.getElementById("lastChance").src = "img/Estrellas/Asset 108.png"
-        alert("Categoría completada!");
         toSection('categories');
         return;
     }
@@ -173,7 +172,6 @@ function verify(choice) {
             indexArray = 0;
             lives = 3;
             clearInterval(update);
-            alert("Se acabaron tus vidas");
             toSection('categories');
         }
     }
