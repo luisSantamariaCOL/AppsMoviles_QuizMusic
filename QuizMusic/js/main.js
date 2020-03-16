@@ -1,6 +1,7 @@
 var indexArray = 0;
 indexIntBar = 0;
 var animacion = document.getElementById("logoCategorias");
+var salir;
 
 var sections = [];
 sections[0] = document.getElementById("menu");
@@ -9,8 +10,10 @@ sections[2] = document.getElementById("categories");
 sections[3] = document.getElementById("credits");
 sections[4] = document.getElementById("instruct");
 sections[5] = document.getElementById("juego");
-
+salir = document.getElementById("menu_stop");
 var game = 0;
+var tiempoActual = 0;
+
 
 var tiempo_splash = 1600;
 window.onload = function () {
@@ -119,9 +122,9 @@ function respuestas() {
 
     time = 10;
     gains = 25;
-    document.getElementById("timerNumb").innerHTML = 10;
+    tiempoActual = 10;
+    document.getElementById("timerNumb").innerHTML = tiempoActual;
     update = setInterval(timing, 1000);
-
     document.getElementById("bar").src = bars[indexArray+1];
     document.getElementById("logoCategorias").src = categorias[game].pregunta[indexArray].opcion[4];
 
@@ -179,12 +182,14 @@ function verify(choice) {
 }
 
 function timing() {
-    time = time - 1;
-    gains = gains - 2;
-    if (time<10) {
-        document.getElementById("timerNumb").innerHTML = time;
+        //Se cambio time por tiempoActual
+        --tiempoActual;
+        gains = gains - 2;
+
+    if (tiempoActual<10) {
+        document.getElementById("timerNumb").innerHTML = tiempoActual;
     }
-    if (time===0) {
+    if (tiempoActual===0) {
         clearInterval(update);
         indexArray++;
         document.getElementById("casilla1").classList.add("false");
@@ -193,6 +198,30 @@ function timing() {
         document.getElementById("casilla4").classList.add("false");
         setTimeout(respuestas, 1000);
     }
+}
+
+function salida(){
+    salir.className = "salir";
+    clearInterval(update);
+    secciones[5].className = "oculto";
+}
+
+function regresar(){
+        score = 0;
+        clearInterval(update);
+        salir.className = "salir oculto";
+        toSection('categories');
+}
+
+function cancelar(){
+    salir.className = "salir oculto";
+    
+    if(update){
+        clearInterval(update);
+    }
+
+    document.getElementById("timerNumb").innerHTML = tiempoActual;
+    update = setInterval(timing, 1000);
 }
 
 function aleatorio(num) {

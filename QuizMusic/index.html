@@ -151,7 +151,7 @@
             <img id="lastChance" class="stars" src="img/Estrellas/Asset 108.png">
             <img id="secondChance" class="stars" src="img/Estrellas/Asset 108.png">
             <img id="thirdChance" class="stars" src="img/Estrellas/Asset 108.png">
-            <img class="botonImagen" id ="next2Stars" onclick="returnConfirm()" src="img/Botones y Fondos/Asset 76.png"
+            <img class="botonImagen" id ="next2Stars" onclick="salida()" src="img/Botones y Fondos/Asset 76.png"
                 alt="Home">
         </div>
         <div class="contenedorArtista">
@@ -188,13 +188,18 @@
             </div>
     </section>
 
-    <section id="alert" class="oculto">
-        <div id="backgrnd">
-            <span id="pregunta_salir">¿Realmente quieres salir?</span>
-            <button id="aceptar" class="boton" onclick="regresar()">Aceptar</button>
-            <button id="cancelar" class="boton" onclick="cancelar()">Cancelar</button>
+
+    <!--                        SECCIÓN MENÚ PAUSA                          -->
+    
+        <div class="salir oculto" id="menu_stop">
+            <img id="fondo_pausa" src="img/creditos/Asset 120.png"></img>
+            <img class="botonImagen" id="aceptar" onclick="regresar()" src="img/Botones y Fondos/Asset 86.png"
+                alt="aceptar">
+            <img class="botonImagen" id="cancelar" onclick="cancelar()" src="img/Botones y Fondos/Asset 79.png"
+            alt="cancelar">
+    
         </div>
-    </section>
+    
 
     <script src="js/main.js"></script>
 </body>
