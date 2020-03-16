@@ -164,7 +164,6 @@ button{
   text-align: center;
   text-decoration: none;
   font-size: 33px;
-  /*  4px 2px ver luego si se cambia*/
   margin: 4px 2px;
   cursor: pointer;
 }
@@ -229,6 +228,7 @@ button{
     left: auto;
     top: 19px;
     width: 40%;
+    transform: rotate(-10deg);
 }
 
 #logo{
@@ -408,17 +408,3 @@ button{
     top: 430px;
     z-index: 20;
 }
-
-  /*
-#menu_stop{
-    position: absolute;
-    width: 360px;
-    height: 700px;
-    background-image: url("/img/creditos/Asset 120.png");
-    top: 200px;
-     bottom: 530.75px;
-    left: 6.63px;
-  }
-
-
-  */
