@@ -260,7 +260,7 @@ button{
 
 #fondoAzul{
     position: absolute;
-    /* left: 2px; */
+    left: 2px; 
     top: 527px;
     z-index: 1;
 }
@@ -339,6 +339,14 @@ button{
     position: relative;
     text-align: center;
     top: -17px;
+}
+
+#textTotal{
+    position: absolute;
+    top: 500px;
+    left: -152px;
+    font-size: 26px;
+    z-index: 10;
 }
 
 #totalScore {

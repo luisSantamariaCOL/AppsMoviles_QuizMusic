@@ -21,11 +21,17 @@ window.onload = function () {
 }
 
 function toSection(sect){
+    
     document.getElementById("primerosBotones").className = "botonImagen animated fadeIn";
     for (var i in sections) {
+
         sections[i].style.display = "none";
     }
+    if(sect == "categories"){
+        document.getElementById("cat").className = "animated bounceInUp";
+    }
     document.getElementById(sect).style.display = "block";
+    
     score = 0;
     indexArray = 0;
     lives = 3;
@@ -36,14 +42,6 @@ function toSection(sect){
     document.getElementById("lastChance").src = "img/Estrellas/Asset 108.png"
 }
 
-function returnConfirm () {
-    var opt = window.confirm("¿Seguro? No se guardará tu progreso.")
-    if (opt) {
-        score = 0;
-        clearInterval(update);
-        toSection('categories');
-    }
-}
 
 function toGame(opc) {
     game = opc;
