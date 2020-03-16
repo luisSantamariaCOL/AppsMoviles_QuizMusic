@@ -15,7 +15,6 @@ section{
 html, body, div, p, h2, a, ul, li, img {
     margin: 0px;
     padding: 0px;
-    /* 100 to 33*/
     font-size: 33px; 
 }
 
@@ -30,23 +29,30 @@ z-index: 5;
 }
 
 #botonJugar{
-    /* 700 to 233*/
     left: 233px;
-    /* 1330 to 428*/
     top: 428px;
 }
 
 #botonHome{
-    /* 100  to 32*/
     position: relative;
     left: auto;
     top: 32px;
 }
 
+#botonHomeIns{
+    position: relative;
+    left: auto;
+    top: 7px;
+}
+
+#barIns{
+    position: absolute;
+    left: 62px;
+    top: 90px;
+}
+
 #botonInstrucciones{
-    /* 100 to 33*/
     left: 33px;
-    /* 1330 to 428*/
     top: 428px;
 }
 #botonCreditos{
@@ -54,21 +60,6 @@ z-index: 5;
     top: 486px;
 }
 
-/*
-.loader {
-  border: 16px solid #f3f3f3; 
-  border-top: 16px solid #3498db; 
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-*/
 .botonesHome{
     position: absolute;
 }
@@ -130,7 +121,7 @@ z-index: 5;
 #botonSig{
     position: relative;
     left: auto;
-    top: 497px;
+    top: 535px;
 }
 
 #barrita{

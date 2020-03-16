@@ -14,6 +14,14 @@ salir = document.getElementById("menu_stop");
 var game = 0;
 var tiempoActual = 0;
 
+var bars = [
+    "img/Interfaces y barritas/Asset 129.png",
+    "img/Interfaces y barritas/Asset 134.png",
+    "img/Interfaces y barritas/Asset 130.png",
+    "img/Interfaces y barritas/Asset 131.png",
+    "img/Interfaces y barritas/Asset 132.png",
+    "img/Interfaces y barritas/Asset 133.png"
+]
 
 var tiempo_splash = 1600;
 window.onload = function () {
@@ -63,6 +71,7 @@ function toSigIns() {
         indexIntBar = 0;
         toSection('home');
         document.getElementById("interfaz").src = "img/Interfaces y barritas/Asset 123.png";
+        document.getElementById("barIns").src = "img/Interfaces y barritas/Asset 129.png";
         return;
     }
 
@@ -74,18 +83,20 @@ function toSigIns() {
         "img/Interfaces y barritas/Asset 125.png"
     ];
 
+    var barIns = [
+        "img/Interfaces y barritas/Asset 134.png",
+        "img/Interfaces y barritas/Asset 130.png",
+        "img/Interfaces y barritas/Asset 131.png",
+        "img/Interfaces y barritas/Asset 132.png",
+        "img/Interfaces y barritas/Asset 133.png"
+    ];
+
     document.getElementById("interfaz").src = cambioInterfaces[indexIntBar];
+    document.getElementById("barIns").src = barIns[indexIntBar];
     indexIntBar++;
 }
 
-var bars = [
-    "img/Interfaces y barritas/Asset 129.png",
-    "img/Interfaces y barritas/Asset 134.png",
-    "img/Interfaces y barritas/Asset 130.png",
-    "img/Interfaces y barritas/Asset 131.png",
-    "img/Interfaces y barritas/Asset 132.png",
-    "img/Interfaces y barritas/Asset 133.png"
-]
+
 
 function respuestas() {
     if (indexArray === 5) { //YA HABIENDO LLEGADO AL FINAL, HAY QUE RESETEAR EL INDEX. 
