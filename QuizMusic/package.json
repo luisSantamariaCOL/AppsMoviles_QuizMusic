@@ -1,26 +1,29 @@
 {
-  "name": "quizmusic",
+  "name": "co.edu.proyecto",
+  "displayName": "Aplicacion",
   "version": "1.0.0",
-  "description": "",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LuisSantamariaUPB/AppsMoviles_QuizMusic.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LuisSantamariaUPB/AppsMoviles_QuizMusic/issues"
-  },
-  "homepage": "https://github.com/LuisSantamariaUPB/AppsMoviles_QuizMusic#readme",
-  "devDependencies": {
-    "grunt": "^1.0.4",
-    "grunt-contrib-uglify": "^4.0.1"
-  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
   "dependencies": {
-    "grunt-contrib-cssmin": "^3.0.0"
+    "cordova-android": "^8.1.0"
+  },
+  "devDependencies": {
+    "cordova-plugin-whitelist": "^1.3.4"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    },
+    "platforms": [
+      "android"
+    ]
   }
 }
